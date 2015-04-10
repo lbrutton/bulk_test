@@ -7,7 +7,10 @@ class GetGames
 		  http.request request
 		end
 	response_body = JSON.parse response.body
-	puts response_body[0]
+	puts response_body[0]["creatives"]["title"]
+		for i in 0..5
+			Game.create(title: response_body[0]["creatives"]["title"])
+		end
 	end
 
 end
