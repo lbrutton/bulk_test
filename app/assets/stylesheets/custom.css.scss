@@ -1,0 +1,31 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.header{
+	text-align:center;
+	font-size: 65px;
+	margin-bottom: 5%;
+}
+
+.list_elem{
+	margin: 10% 0 10% 0;
+}
+
+.title{
+	font-size: 50px;
+	text-align:center;
+	margin-bottom: 3%;
+}
+
+.image{
+	float: left;
+}
+
+.description{
+	margin-left: 20%;
+}
+
+.btn-default{
+	font-size: 45px;
+}
+

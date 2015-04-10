@@ -1,8 +1,17 @@
-<h1>Games go here </h1>
-<ul>
-<%= @games.each do |game| %>
-<li>
-	<%= game.title %>
+<h1 class="header">Games motherfucker
+<br>(Oh, and apps too, don't forget)</h1>
+<% @games.each do |game| %>
+<div class="list_elem">
+	<div class="title">
+		<%= game.title %>
+	</div>
+	<%= image_tag game.icon, class:"image" %>
+	<div class="description">
+		<%= game.description %>
+	</div>
+	<div class="text-center">
+		<%= link_to "Download dat shit", game.click_url, class:"btn btn-default" %>
+	</div>
 	<% end %>
-</li>
-</ul>
+</div>
+
