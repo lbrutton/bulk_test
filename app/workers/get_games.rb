@@ -6,6 +6,7 @@ class GetGames
 		  request = Net::HTTP::Get.new api_uri.request_uri
 		  http.request request
 		end
+		
 	response_body = JSON.parse response.body
 	#puts response_body[0]["creatives"]["title"]
 		body_length = response_body.length
