@@ -8,14 +8,14 @@ class GetGames
 		end
 		
 	response_body = JSON.parse response.body
-	#puts response_body[0]["creatives"]["title"]
+	puts response_body[0]["campaigns"].first["click_url"]
 		body_length = response_body.length
 		game_indexes = (0..(body_length-1)).to_a.sort{rand() - 0.5}[0..5]
 		for i in game_indexes
 			Game.create(title: response_body[i]["creatives"]["title"], 
 				icon: response_body[i]["creatives"]["icon_url"],
-				description: response_body[i]["creatives"]["description"])
+				description: response_body[i]["creatives"]["description"],
+				click_url: response_body[i]["campaigns"].first["click_url"])
 		end
 	end
-
 end
