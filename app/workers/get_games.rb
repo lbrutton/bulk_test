@@ -1,3 +1,4 @@
+require 'net/http'
 class GetGames
 
 	def perform
@@ -8,7 +9,6 @@ class GetGames
 		end
 		
 	response_body = JSON.parse response.body
-	puts response_body[0]["campaigns"].first["click_url"]
 		body_length = response_body.length
 		game_indexes = (0..(body_length-1)).to_a.sort{rand() - 0.5}[0..5]
 		for i in game_indexes

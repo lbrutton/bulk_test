@@ -1,5 +1,4 @@
-<h1 class="header">Games motherfucker
-<br>(Oh, and apps too, don't forget)</h1>
+<h1 class="header">Apps</h1>
 <div class="main_container">
 	<% @games.each do |game| %>
 	<div class="list_elem">
@@ -11,7 +10,7 @@
 			<%= game.description %>
 		</div>
 		<div class="text-center">
-			<%= link_to "Download dat shit", game.click_url, class:"btn btn-default" %>
+			<%= link_to "Download", game.click_url, class:"btn btn-default" %>
 		</div>
 		</div>
 		<% end %>	
